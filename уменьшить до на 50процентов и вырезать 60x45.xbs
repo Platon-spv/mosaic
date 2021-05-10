@@ -1,0 +1,5 @@
+resize( 1 lanczos 50% 50% 0 1 0 )
+crop( 120 90 60 45 )
+settings( 1 0 0 0 0 0 0 )
+output_path( 60x45 )
+output( jpeg 80 0 0 0 0 0 1 1 1 0 1 )

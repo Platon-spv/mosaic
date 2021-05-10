@@ -1,0 +1,4 @@
+resize( 1 lanczos 60 45 0 1 0 )
+settings( 1 0 0 0 0 0 0 )
+output_path( 600x450 )
+output( jpeg 80 0 0 0 0 0 1 1 1 0 1 )

@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор мозаїки | Ferozit</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:300,400,500,600,700,900|Roboto&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/ico" />
+    <title>Генератор мозаїки &#8211;</title>
+    <!-- All In One SEO Pack 3.4.3[213,247] -->
+    <meta name="description" content="Створіть свою ЕКСКЛЮЗИВНУ МОЗАЇКУ, яка не схожа на інші. Втільте свої дизайнерські фантазії." />
+    <link rel='stylesheet' id='slick-css' href='./css/slick.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='slick-theme-css' href='./css/slick-theme.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='selectize-css-css' href='./css/selectize.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='selectize-default-css-css' href='./css/selectize.default.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='select2-css-css' href='./css/select2.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='light-box-css-css' href='./css/lightbox.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='nouislider-css' href='./css/nouislider.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-ui-css' href='./css/jquery-ui.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='jquery-ui.theme-css' href='./css/jquery-ui.theme.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='style-css' href='./css/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='storefront-style-inline-css' href='./css/from-inline-style.css' type='text/css' media='all' />
+    <script type='text/javascript' src='js/jquery-2.2.0.min.js'></script>
+</head>
+
+<body class="page-template page-template-page-mosaik page-template-page-mosaik-php page page-id-853 right-sidebar ">
+    <div class="content">
+        <section class="inner_page mosaik_page">
+            <div class="container">
+                <p class="subtitle_mosaik">Калькулятор <b>Mosaic Den</b></p>
+                <div class="wrap_generator">
+                    <div class="col_2">
+                        <div class="wrap_canvas">
+                            <canvas id="canvas" width=532 height=405></canvas>
+                            <img class="bg show" src="./img/canvas_demo.jpg" style="display: none; height: 405px; width: 532px;">
+                        </div>
+                        <p class="note">* - відтінки згенерованого зображення можуть відрізнятися від реальних через настройки екрану
+                            та не може бути піставою для висуненя претензій</p>
+                        <div class="rezult_gen">
+                            <p class="label">Код мозаїки:</p>
+                            <div class="code_gen"></div>
+                        </div>
+                        <div class="order">
+                            <button class="btn_def btn_down">ЗАВАНТАЖИТИ</button>
+                            <button class="btn_def btn_order">ЗАМОВИТИ</button>
+                        </div>
+                    </div>
+                    <div class="col_1">
+                        <div class="subtitle_mosaik">Кольори камінців:
+                        </div>
+                        <div class="list_choose_color">
+                            <div class="item_color">
+                                <div class="preview_img" data-color="">
+                                    <img src="img/default_mosaik_lavi_color.jpg" alt="">
+                                </div>
+                                <div class="range">
+                                    <div class="range_color"></div>
+                                </div>
+                                <div class="value_color" id="value_color_1"></div>
+                            </div>
+                            <div class="item_color">
+                                <div class="preview_img" data-color="">
+                                    <img src="img/default_mosaik_lavi_color.jpg" alt="">
+                                </div>
+                                <div class="range">
+                                    <div class="range_color"></div>
+                                </div>
+                                <div class="value_color" id="value_color_2"></div>
+                            </div>
+                            <div class="item_color">
+                                <div class="preview_img" data-color="">
+                                    <img src="img/default_mosaik_lavi_color.jpg" alt="">
+                                </div>
+                                <div class="range">
+                                    <div class="range_color"></div>
+                                </div>
+                                <div class="value_color" id="value_color_3"></div>
+                            </div>
+                            <div class="item_color">
+                                <div class="preview_img" data-color="">
+                                    <img src="img/default_mosaik_lavi_color.jpg" alt="">
+                                </div>
+                                <div class="range">
+                                    <div class="range_color"></div>
+                                </div>
+                                <div class="value_color" id="value_color_4"></div>
+                            </div>
+                        </div>
+                        <div class="wrap_suma_value">
+                            <div class="suma_value">
+                                <p class="label">Заповнення: %</p>
+                                <div class="value_color"></div>
+                            </div>
+                            <p class="note">Сума має становити 100 %</p>
+                        </div>
+                        <div class="control_gen">
+                            <button class="btn_def btn_gen">ЗГЕНЕРУВАТИ</button>
+                            <button class="btn_new_gen">НОВИЙ РОЗРАХУНОК</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="bg_modal modal_wrap_imgs">
+            <div class="modal_imgs">
+                <div><img src="img/60x45/1.jpg" data-color="#129046" data-code="GA" alt=""></div>
+                <div><img src="img/60x45/2.jpg" data-color="#5e7944" data-code="GB" alt=""></div>
+                <div><img src="img/60x45/3.jpg" data-color="#3a9472" data-code="GC" alt=""></div>
+                <div><img src="img/60x45/4.jpg" data-color="#d34754" data-code="PA" alt=""></div>
+                <div><img src="img/60x45/5.jpg" data-color="#bb9fbd" data-code="PB" alt=""></div>
+                <div><img src="img/60x45/6.jpg" data-color="#959768" data-code="SA" alt=""></div>
+                <div><img src="img/60x45/7.jpg" data-color="#9b9d64" data-code="SB" alt=""></div>
+                <div><img src="img/60x45/8.jpg" data-color="#585934" data-code="SC" alt=""></div>
+                <div><img src="img/60x45/9.jpg" data-color="#459cb0" data-code="XA" alt=""></div>
+                <div><img src="img/60x45/10.jpg" data-color="#02505c" data-code="XB" alt=""></div>
+                <!--                 <div><img src="img/small_icon/BC.jpg" data-color="#1a130d" data-code="BC" alt=""></div>
+                <div><img src="img/small_icon/BA.jpg" data-color="#0b0a09" data-code="BA" alt=""></div>
+                <div><img src="img/small_icon/BB.jpg" data-color="#0f0d0c" data-code="BB" alt=""></div> -->
+                <div><img src="img/60x45/11.jpg" data-color="#f48b0f" data-code="YA" alt=""></div>
+                <div><img src="img/60x45/12.jpg" data-color="#ee9a36" data-code="YB" alt=""></div>
+                <div><img src="img/60x45/13.jpg" data-color="#fae556" data-code="YC" alt=""></div>
+                <div><img src="img/60x45/14.jpg" data-color="#dfb946" data-code="YD" alt=""></div>
+                <div><img src="img/60x45/15.jpg" data-color="#eeab36" data-code="YE" alt=""></div>
+                <div><img src="img/60x45/16.jpg" data-color="#ce8733" data-code="YG" alt=""></div>
+                <div><img src="img/60x45/17.jpg" data-color="#f35f2c" data-code="RA" alt=""></div>
+                <!--   <div><img src="img/small_icon/RB.jpg" data-color="#e5753e" data-code="RB" alt=""></div>
+                <div><img src="img/small_icon/RC.jpg" data-color="#ea471c" data-code="RC" alt=""></div>
+                <div><img src="img/small_icon/RD.jpg" data-color="#9e3d23" data-code="RD" alt=""></div>
+                <div><img src="img/small_icon/RE.jpg" data-color="#8d3821" data-code="RE" alt=""></div>
+                <div><img src="img/small_icon/RG.jpg" data-color="#a85721" data-code="RG" alt=""></div>
+                <div><img src="img/small_icon/RF.jpg" data-color="#f58e5b" data-code="RF" alt=""></div>
+                <div><img src="img/small_icon/WA.jpg" data-color="#fff9e5" data-code="WA" alt=""></div>
+                <div><img src="img/small_icon/WB.jpg" data-color="#fee7d5" data-code="WB" alt=""></div>
+                <div><img src="img/small_icon/WC.jpg" data-color="#f8e9ce" data-code="WC" alt=""></div>
+                <div><img src="img/small_icon/WD.jpg" data-color="#f1dac7" data-code="WD" alt=""></div>
+                <div><img src="img/small_icon/ZA.jpg" data-color="#543223 data-code=" ZA" alt=""></div>
+                <div><img src="img/small_icon/ZB.jpg" data-color="#774732" data-code="ZB" alt=""></div>
+                <div><img src="img/small_icon/ZC.jpg" data-color="#5e2716" data-code="ZC" alt=""></div>
+                <div><img src="img/small_icon/ZD.jpg" data-color="#602d1d" data-code="ZD" alt=""></div>
+                <div><img src="img/small_icon/ZE.jpg" data-color="#602d1d" data-code="ZE" alt=""></div>
+                <div><img src="img/small_icon/ZF.jpg" data-color="#321d16" data-code="ZF" alt=""></div>
+                <div><img src="img/small_icon/ZG.jpg" data-color="#271a16" data-code="ZG" alt=""></div>
+                <div><img src="img/small_icon/ZH.jpg" data-color="#6f2e1a" data-code="ZH" alt=""></div>
+                <div><img src="img/small_icon/KA.jpg" data-color="#f9e68f" data-code="KA" alt=""></div>
+                <div><img src="img/small_icon/KB.jpg" data-color="#edc56f" data-code="KB" alt=""></div>
+                <div><img src="img/small_icon/KC.jpg" data-color="#c0934d" data-code="KC" alt=""></div> -->
+            </div>
+        </div>
+        <div class="bg_modal modal_wrap_order">
+            <div class="modal_order">
+                <div class="head_modal_order head_modal_order_form">
+                    <p class="title_modal_order">
+                        Форма замовлення <br>
+                        ексклюзивної мозаїки
+                    </p>
+                    <div class="close_modal">
+                        <img src="img/btn_close.svg" alt="">
+                    </div>
+                </div>
+                <div class="wrap_form wrap_form_order">
+                    <form method="POST" id="order_form">
+                        <div class="form_group">
+                            <label for="">Ім’я:</label>
+                            <input type="text" name="name" class="form_control" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="">Телефон:</label>
+                            <input type="text" name="phone" class="form_control" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="">Місто:</label>
+                            <input type="text" name="city" class="form_control" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="">Код мозаїки:</label>
+                            <input type="text" name="code" class="form_control code_input" required>
+                        </div>
+                        <div class="form_group">
+                            <label for="">Площа поверхні (стіни):</label>
+                            <input type="text" name="square" class="form_control" required>
+                        </div>
+                        <div class="form_group last_form_group">
+                            <input type="checkbox" name="agree" id="agree" required>
+                            <label for="agree">Згода на обробку персональних даних:</label>
+                        </div>
+                        <p class="text_required">Заповнення усіх полей обов’язкове.</p>
+                        <input type="submit" class="btn_send" value="НАДІСЛАТИ ЗАМОВЛЕННЯ">
+                    </form>
+                </div>
+                <div class="head_modal_order wrap_form_success">
+                    <p class="title_modal_order">
+                        Ваше замовлення прийнято!
+                    </p>
+                    <div class="close_modal">
+                        <img src="img/btn_close.svg" alt="">
+                    </div>
+                </div>
+                <div class="wrap_form wrap_form_success">
+                    <img class="icon_ok" src="img/icon_ok.svg" alt="">
+                    <p class="title_success">Дякуємо! :)</p>
+                    <button class="btn_ok">OK</button>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/jspdf.min.js"></script>
+        <script src="js/jspdf.customfonts.min.js"></script>
+        <script src="js/default_vfs.js"></script>
+        <!-- <script src="https://ferozit.ua/wp-content/themes/storefront/js/html2canvas.min.js"></script> -->
+        <!-- <script src="https://ferozit.ua/wp-content/themes/storefront/js/mosaik.min.js"></script> -->
+        <script src="js/mosaik.js"></script>
+        <script src="js/qrcode.min.js"></script>
+        ﻿
+    </div>
+    <script src="js/jquery.validate.min.js"></script>
+    <div id="qrcode" style="display: none;"></div>
+    <div style="display: none;">
+        <span>Перед нанесенням мозїки рекомендовано застосувати кварц-грунт тонований в колір декоративної штукатурки</span>
+<div>        <h1>Відділ продажу Lavi Color</h1>
+        <h3>Тел: (000) 000-00-00</h3>
+        <h3>Email: sales@lavicolor.center</h3>
+        <h3>www.lavicolor.center</h3></div>
+    </div>
+    <script type="text/javascript">
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: window.location.href,
+        width: 64,
+        height: 64,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+    </script>
+</body>
+
+</html>
